@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+    body {
+    background-color: #fff;
+    max-width: 100%;
+    overflow-x: hidden;}
+    #header {
+    font-size: 50px;
+    font-family: Recoleta, Georgia, sans-serif;
+    margin-top: 16px;
+    color: #0d0e10;
+    display: inline-block;
+    margin-bottom: -10px;
+    margin-left: 5%;
+    margin-top: 50px;
+    transform: translateX(30px);
+    font-weight: bolder;
+    @font-face {
+    font-family: 'Recoleta';
+    src: url('RecoletaAlt-Bold.ttf');}}
+    #headerSolution {
+    color: #0d0e10;
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-family: Outfit Light, sans-serif;
+    display: inline-block;
+    margin-left: 7%;}
+    .topnav {
+    overflow: hidden;
+    background-color: #fff;}
+    .topnav a {
+    float: left;
+    color: #0d0e10;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    font-family: sans-serif;
+    margin-top: 13px;}
+    .topnav a:hover {
+    background-color: #ddd;
+    color: black;}
+    .topnav a.active {
+    font-weight: bolder;
+    color: #0d0e10;
+    font-family: sans-serif;}
+    .imageForDeTing {
+    width: 490px;
+    height: 506px;
+    float: right;
+    margin-right: 100px;
+    transform: translateY(-230px);}
+    .dot {
+    height: 16px;
+    width: 16px;
+    background-color: #fccc44;
+    border-radius: 50%;
+    transform: translate(15px, 40px);}
+    .dot2 {
+    height: 16px;
+    width: 16px;
+    background-color: #6b7d92;
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+    left: auto;
+    top: auto;
+    right: -35%;
+    bottom: -20%;
+    width: 920px;
+    height: 920px;
+    border-radius: 100%;
+    background-image: linear-gradient(180deg, #f1f3f6, rgba(241, 243, 246, 0.2));
+    z-index: 0;}
+    .imageForDeTing2 {
+    width: 180px;
+    height: 180px;
+    float: right;
+    transform: translate(540px, -130px);}
+    #websiteLogo {
+    float: left;
+    margin-top: 20px;
+    transform: translate(110px, -1px);
+    width: 201.5px;
+    height: 52px;}
+    .imageForDeTing3 {
+    width: 260px;
+    height: 150px;
+    float: right;
+    transform: translate(330px, 200px);}
+    .imageForDeTing5 {
+    width: 80px;
+    height: 80px;
+    float: right;
+    transform: translate(980px, 245px);}
+    .dot3 {
+    height: 64px;
+    width: 64px;
+    background-color: #fccc44;
+    border-radius: 50%;
+    transform: translate(895px, 145px);
+    z-index: 0;}
+    nav ul ul {
+    display: none;}
+    nav ul li:hover > ul {
+    display: block;}
+    nav {
+    text-align: center;
+    z-index: 1;}
+    nav ul {
+    display: inline-block;
+    list-style: none;
+    z-index: 1;}
+    nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+    padding: 10px;}
+    nav ul li:hover {
+    background-color: #fff;}
+    nav {
+    background-color: #fff;}
+    nav ul li a {
+    color: #000000;
+    font-size: 18px;
+    text-decoration: none;
+    font-family: sans-serif;}
+    select {
+    background-color: #fff;
+    color: black;
+    padding: 12px 3px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    appearance: none;
+    position: relative;}
+    option {
+    background-color: #fff;
+    color: black;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;}
+    #homeButton {
+    color: black;
+    font-family: Outfit Light, sans-serif;
+    background-color: #fff;
+    border: 0ch;
+    cursor: pointer;
+    padding-left: 20px;
+    padding-top: 12px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    font-size: 16px;
+    transform: translate(12px, 17px);}
+    select::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid black;}
+    .dropdown {
+    position: relative;
+    display: inline-block;}
+    .dropbtn {
+    background-color: #fff;
+    color: black;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transform: translate(10px, 17px);
+    font-family: Outfit Light, sans-serif;}
+    .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    transform: translate(-20px, 18px);}
+    .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-family: 'Recoleta', Georgia, sans-serif;
+    font-weight: bold;
+    @font-face {
+    font-family: 'Recoleta';
+    src: url('RecoletaAlt-Bold.ttf');}}
+    nav ul {
+    display: flex;
+    justify-content: flex-end;}
+    .dropdown-content a:hover {background-color: #fff}
+    .dropdown:hover .dropdown-content {
+    display: block;}
+    .dropdown:hover .dropbtn {
+    background-color: #fff;}
+    .dropdown::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 10px; /* adjust the distance from the right */
+    transform: translate(15px, 14px);
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #000; /* color of the arrow */;}
+    .dropbtn {
+    padding-right: 20px; /* adjust the value to add the desired distance */}
+    .dropbtn {
+    margin-right: 5px; /* adjust the value to add the desired distance */}
+    #loginButton {
+    transform: translate(230px, 15px);
+    background: none;
+    text-decoration: none;
+    border: none;
+    font-family: Outfit Light, sans-serif;
+    font-size: 15px;}
+    #installAppButton {
+    transform: translate(235px, 15px);
+    background-color: black;
+    color: white;
+    font-weight: 700;
+    font-family: Outfit Light, sans-serif;
+    padding: 20px 25px;
+    border-radius: 12%;
+    border-style: solid;
+    line-height: 120%;
+    font-size: 14px;
+    z-index: 1;}
+    .imageForDeTing6 {
+    transform: translate(110px, 20px);
+    height: 76.244px;
+    width: 309.61px;}
+    #notOnShopify {
+    font-family: Outfit Thin, sans-serif;
+    font-size: 16px;
+    transform: translate(450px, -60px);
+    font-weight: 600;}
+    #contactSales {
+    font-family: Outfit Light, sans-serif;
+    font-size: 18px;
+    transform: translate(450px, -105px);
+    font-weight: 900;}
+    .imageforDeTing7 {
+    transform: translate(500px, 500px);
+    width: 500px;
+    height: 500px;}
+    #tick1 {
+    width: 25.2px;
+    height: 25.2px;
+    transform: translate(110px, -65px);}
+    #tick2 {
+    width: 25.2px;
+    height: 25.2px;
+    transform: translate(300px, -65px);}
+    #tooxt1 {
+    font-family: Outfit Light, sans-serif;
+    transform: translate(110px, -70px);}
+    #tooxt2 {
+    font-family: Outfit Light, sans-serif;
+    transform: translate(330px, -125px);}
+
+    
+    
+
+</style>
+<body>
+    
+  <nav>
+    <img src="https://assets.website-files.com/61f138487dd58a6828fae08f/61fb9602321e3f0341608a6e_gameball-logo.svg" alt="Gameball Logo" id="websiteLogo">
+    <button id="homeButton" value="home">Home</button>
+    <div class="dropdown">
+      <button class="dropbtn">Product</button>
+      <div class="dropdown-content">
+          <a href="#">Loyalty & Cashback</a>
+          <a href="#">VIP & Tiering</a>
+          <a href="#">Referrals</a>
+          <a href="#">Gamification & Rule-based Rewards</a>
+          <a href="#">Wallets</a>
+          <a href="#">Messaging</a>
+          <a href="#">Profiling & Segmentation</a>
+      </div>
+  </div>
+  <div class="dropdown">
+      <button class="dropbtn">Resources</button>
+      <div class="dropdown-content">
+          <a href="#">Integrations</a>
+          <a href="#">Apps</a>
+          <a href="#">Help Center</a>
+          <a href="#">Blog</a>
+          <a href="#">Developers</a>
+      </div>
+  </div>
+  <div class="dropdown">
+      <button class="dropbtn">Pricing</button>
+      <div class="dropdown-content">
+          <a href="#">Shopify</a>
+          <a href="#">App/SDKs Integration</a>
+      </div>
+  </div>
+  <button id="loginButton">Log In</button>
+  <button id="installAppButton">Install App</button>
+</nav>
+  
+
+  <script>
+    var dropdown = document.getElementById("dropdown");
+
+dropdown.onchange = function() {
+  if (dropdown.value === "home") {
+    // Perform action for Home
+  } else if (dropdown.value === "product") {
+    // Perform action for Product
+  } else if (dropdown.value === "resources") {
+    // Perform action for Resources
+  }else if (dropdown.value === "pricing") {
+    // Perform action for Pricing
+  }
+}
+  </script>
+
+
+    <div style="text-align:center" class="dot">
+        <span class="dot"></span>
+    </div>
+
+    <div style="text-align:center" class="dot2">
+        <span class="dot"></span>
+    </div>
+
+    <div style="text-align:center" class="dot3">
+        <span class="dot"></span>
+    </div>
+
+    <div>
+        <h1 id="header">You're losing customers. <br> We know how to fix it. <br></h1><br>
+        <p id="headerSolution">Gameball is all you need to turn visitors and <br> occasional buyers into loyal, lifetime customers</p>
+    </div>
+    
+    <div>
+        <img src="https://assets.website-files.com/61f138487dd58a6828fae08f/61fc16e10a80c056da1c48d3_gameball-home-hero-main.png" alt="" class="imageForDeTing">
+        <img src="https://assets.website-files.com/61f138487dd58a6828fae08f/61fc16e1f8310da3b5fc71bc_gameball-home-hero-profile.png" alt="" class="imageForDeTing2">
+        <img src="https://assets.website-files.com/61f138487dd58a6828fae08f/61fc17c36719d369410a5a94_gameball-home-hero-message-p-500.png" alt="" class="imageForDeTing3">
+        <img src="https://assets.website-files.com/61f138487dd58a6828fae08f/61f1501adf94b031eb45a307_icon-features-wallets.svg" alt="" class="imageForDeTing5">
+        <img src="https://assets.website-files.com/61f138487dd58a6828fae08f/628787fa3b748a2c22575084_button_shopify_store.svg" alt="" class="imageForDeTing6">
+        <img src="https://assets.website-files.com/61f138487dd58a6828fae08f/61f138497dd58aad67fae0c3_Group%209.svg" alt="" class="imageForDeTing7">
+    </div>
+
+    <div>
+        <p id="notOnShopify">Not on Shopify?</p><br>
+        <p id="contactSales">Contact Sales</p>
+    </div>
+
+    <div>
+        <img src="https://assets.website-files.com/61f138487dd58a6828fae08f/61f138497dd58a5b5efae0d6_Group%2011.svg" alt="" id="tick1">
+        <img src="https://assets.website-files.com/61f138487dd58a6828fae08f/61f138497dd58a5b5efae0d6_Group%2011.svg" alt="" id="tick2"><br>
+        <p id="tooxt1">No credit card info <br> required</p>
+        <p id="tooxt2">Cancel any time <br> during trial</p>
+    </div>
+</body>
+</head>
+</html>
